@@ -5,6 +5,8 @@
  */
 
 import { frOps, enOps } from "./dictionaryOps";
+import { frLegacy, enLegacy } from "./dictionaryLegacy";
+import { frNext, enNext } from "./dictionaryNext";
 
 export type Locale = "fr" | "en";
 
