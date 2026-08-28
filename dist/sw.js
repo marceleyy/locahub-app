@@ -16,7 +16,12 @@
  *      donnée du tout. On échoue franchement, l'interface bascule hors ligne.
  */
 
-const VERSION = "v4";
+/*
+ * IMPORTANT : incrémenter VERSION à chaque livraison qui change le shell.
+ * `activate` supprime tous les caches dont la clé ne correspond pas, ce qui
+ * évite qu'un ancien index.html défectueux survive à un correctif.
+ */
+const VERSION = "v5";
 const SHELL_CACHE = `locahub-shell-${VERSION}`;
 const ASSET_CACHE = `locahub-assets-${VERSION}`;
 const SHELL_URL = "/index.html";

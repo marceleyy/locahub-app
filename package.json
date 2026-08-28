@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/check-names.cjs && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "dev:lan": "vite --host",
-    "preview:lan": "vite preview --host --port 4173"
+    "preview:lan": "vite preview --host --port 4173",
+    "check:names": "node scripts/check-names.cjs",
+    "build:fast": "vite build"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",

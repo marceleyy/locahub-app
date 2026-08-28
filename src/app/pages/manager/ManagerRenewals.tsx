@@ -11,7 +11,7 @@ import { buildRenewalPdf } from "@/app/lib/documents";
 import { downloadPdf } from "@/app/lib/pdf";
 import { recommendRent } from "@/app/lib/assist";
 import {
-  Page, PageHeader, Card, SectionTitle, Badge, Button, Modal, Field, Input, Select, StatCard, Alert, EmptyState, Progress, ChipGroup,
+  Page, PageHeader, Card, SectionTitle, Badge, Button, Modal, Field, Input, Select, StatCard, Alert, EmptyState, Progress, ChipGroup, ConfirmSheet,
 } from "@/app/components/common/ui";
 
 export function ManagerRenewals() {
