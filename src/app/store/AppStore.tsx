@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import type { ReactNode } from "react";
 import {
   seedUsers, seedProperties, seedLeases, seedApplications, seedPayments,
-  seedTickets, seedVisits, seedProspects, seedInventories, seedMessages,
+  seedTickets, seedVisits, seedProspects, seedInventories,
   seedAudit, seedMarket, seedFinancialHistory,
 } from "@/app/data/seed";
 import {
@@ -34,7 +34,6 @@ function buildInitialState() {
     visits: seedVisits,
     prospects: seedProspects,
     inventories: seedInventories,
-    conversations: seedMessages,
     audit: seedAudit,
     market: seedMarket,
     financialHistory: seedFinancialHistory,
@@ -264,17 +263,6 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
       const visit = { id: newId("v"), status: "pending", ...data };
       setDb((prev: any) => ({ ...prev, visits: [visit, ...prev.visits] }));
       return visit;
-    };
-
-    const sendMessage = (conversationId: string, body: any) => {
-      setDb((prev: any) => ({
-        ...prev,
-        conversations: prev.conversations.map((c: any) =>
-          c.id === conversationId
-            ? { ...c, messages: [...c.messages, { id: newId("m"), from: currentUserId, at: new Date().toISOString().slice(0, 16), body }] }
-            : c
-        ),
-      }));
     };
 
     // ---------- Écriture : tâches ----------
@@ -750,7 +738,7 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
       createApplication, updateApplication,
       createTicket, updateTicket,
       createProspect, updateProspect, createVisit,
-      sendMessage, resetDemo, log,
+      resetDemo, log,
       getBuilding, buildingOfProperty, unitsOfBuilding,
       tasksOfProperty, tasksOfAssignee, invoicesOfProperty, invoicesOfProvider,
       getProvider, listingsOfProperty, economicsOf,

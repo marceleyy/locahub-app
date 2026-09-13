@@ -1,4 +1,4 @@
-import { LayoutDashboard, Building2, Users, Wallet, TrendingUp, Wrench, MessageSquare, MapPin, Layers, Scale, AlertTriangle, RefreshCw, Inbox, ClipboardCheck } from "lucide-react";
+import { LayoutDashboard, Building2, Users, Wallet, TrendingUp, Wrench, MapPin, Layers, Scale, AlertTriangle, RefreshCw, Inbox, ClipboardCheck } from "lucide-react";
 import { AppShell } from "@/app/components/common/AppShell";
 
 export function LandlordLayout() {
@@ -22,7 +22,6 @@ export function LandlordLayout() {
         { path: "/landlord/legal", icon: Scale, labelKey: "nav.legalAssistant" },
         { path: "/landlord/market", icon: MapPin, labelKey: "nav.market" },
         { path: "/landlord/maintenance", icon: Wrench, labelKey: "nav.maintenance" },
-        { path: "/landlord/messages", icon: MessageSquare, labelKey: "nav.messages" },
       ]}
     />
   );

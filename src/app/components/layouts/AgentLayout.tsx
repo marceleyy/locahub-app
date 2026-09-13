@@ -1,4 +1,4 @@
-import { LayoutDashboard, Briefcase, UserPlus, CalendarClock, ClipboardCheck, Percent, MessageSquare, MapPin, ListChecks, Building2, HardHat, Banknote, Scale, Megaphone, AlertTriangle, RefreshCw, Inbox, ClipboardList } from "lucide-react";
+import { LayoutDashboard, Briefcase, UserPlus, CalendarClock, ClipboardCheck, Percent, MapPin, ListChecks, Building2, HardHat, Banknote, Scale, Megaphone, AlertTriangle, RefreshCw, Inbox, ClipboardList } from "lucide-react";
 import { AppShell } from "@/app/components/common/AppShell";
 
 export function AgentLayout() {
@@ -26,7 +26,6 @@ export function AgentLayout() {
         { path: "/agent/inbox", icon: Inbox, labelKey: "nav.inbox" },
         { path: "/agent/legal", icon: Scale, labelKey: "nav.legalAssistant" },
         { path: "/agent/market", icon: MapPin, labelKey: "nav.market" },
-        { path: "/agent/messages", icon: MessageSquare, labelKey: "nav.messages" },
       ]}
     />
   );

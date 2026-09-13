@@ -4,7 +4,7 @@ import { useI18n } from "@/app/i18n/I18nProvider";
 import { useStore } from "@/app/store/AppStore";
 import { Page, PageHeader, Card, StatCard, SectionTitle, Table, Badge, Alert } from "@/app/components/common/ui";
 
-export function AgentCommissions() {
+export function BrokerCommissions() {
   const { t, locale, money, m } = useI18n();
   const { db, currentUser, getProperty } = useStore();
 

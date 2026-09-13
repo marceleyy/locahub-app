@@ -24,13 +24,13 @@ import { LandlordTenants } from "@/app/pages/landlord/LandlordTenants";
 import { LandlordAnalytics } from "@/app/pages/landlord/LandlordAnalytics";
 import { LandlordFinances } from "@/app/pages/landlord/LandlordFinances";
 
-// Espace agent
-import { AgentDashboard } from "@/app/pages/agent/AgentDashboard";
-import { AgentPortfolio } from "@/app/pages/agent/AgentPortfolio";
-import { AgentPipeline } from "@/app/pages/agent/AgentPipeline";
-import { AgentVisits } from "@/app/pages/agent/AgentVisits";
-import { AgentInventory } from "@/app/pages/agent/AgentInventory";
-import { AgentCommissions } from "@/app/pages/agent/AgentCommissions";
+// Espace courtage (mandats, visites, pipeline, commissions)
+import { BrokerDashboard } from "@/app/pages/broker/BrokerDashboard";
+import { BrokerPortfolio } from "@/app/pages/broker/BrokerPortfolio";
+import { BrokerPipeline } from "@/app/pages/broker/BrokerPipeline";
+import { BrokerVisits } from "@/app/pages/broker/BrokerVisits";
+import { BrokerInventoryLog } from "@/app/pages/broker/BrokerInventoryLog";
+import { BrokerCommissions } from "@/app/pages/broker/BrokerCommissions";
 
 // Modules de gestion (espace gestionnaire)
 import { ManagerTasks } from "@/app/pages/manager/ManagerTasks";
@@ -58,7 +58,6 @@ import { AdminAudit } from "@/app/pages/admin/AdminAudit";
 import { AdminSettings } from "@/app/pages/admin/AdminSettings";
 
 // Écrans partagés
-import { Messages } from "@/app/pages/shared/Messages";
 import { Maintenance } from "@/app/pages/shared/Maintenance";
 import { MarketAnalysis } from "@/app/pages/shared/MarketAnalysis";
 import { InterventionForm } from "@/app/pages/shared/InterventionForm";
@@ -84,7 +83,6 @@ export const router = createBrowserRouter([
           { path: "map", element: <TenantMap /> },
           { path: "maintenance", element: <Maintenance /> },
           { path: "report", element: <InterventionForm /> },
-          { path: "messages", element: <Messages /> },
           { path: "inbox", element: <Inbox /> },
           { path: "property/:id", element: <PropertyDetail /> },
         ],
@@ -110,7 +108,6 @@ export const router = createBrowserRouter([
           { path: "renewals", element: <ManagerRenewals /> },
           { path: "inventory", element: <InventoryFlow /> },
           { path: "inbox", element: <Inbox /> },
-          { path: "messages", element: <Messages /> },
         ],
       },
 
@@ -118,13 +115,13 @@ export const router = createBrowserRouter([
         path: "agent",
         element: <AgentLayout />,
         children: [
-          { index: true, element: <AgentDashboard /> },
-          { path: "dashboard", element: <AgentDashboard /> },
-          { path: "portfolio", element: <AgentPortfolio /> },
-          { path: "pipeline", element: <AgentPipeline /> },
-          { path: "visits", element: <AgentVisits /> },
-          { path: "inventory-log", element: <AgentInventory /> },
-          { path: "commissions", element: <AgentCommissions /> },
+          { index: true, element: <BrokerDashboard /> },
+          { path: "dashboard", element: <BrokerDashboard /> },
+          { path: "portfolio", element: <BrokerPortfolio /> },
+          { path: "pipeline", element: <BrokerPipeline /> },
+          { path: "visits", element: <BrokerVisits /> },
+          { path: "inventory-log", element: <BrokerInventoryLog /> },
+          { path: "commissions", element: <BrokerCommissions /> },
           { path: "tasks", element: <ManagerTasks /> },
           { path: "calendar", element: <ManagerCalendar /> },
           { path: "buildings", element: <ManagerBuildings /> },
@@ -139,7 +136,6 @@ export const router = createBrowserRouter([
           { path: "maintenance", element: <Maintenance /> },
           { path: "report", element: <InterventionForm /> },
           { path: "market", element: <MarketAnalysis /> },
-          { path: "messages", element: <Messages /> },
         ],
       },
 
@@ -151,7 +147,7 @@ export const router = createBrowserRouter([
           { path: "jobs", element: <ProviderJobs /> },
           { path: "invoices", element: <ProviderInvoices /> },
           { path: "profile", element: <ProviderProfile /> },
-          { path: "messages", element: <Inbox /> },
+          { path: "inbox", element: <Inbox /> },
         ],
       },
 

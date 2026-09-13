@@ -11,7 +11,7 @@ export function ProviderLayout() {
         { path: "/provider/jobs", icon: ClipboardList, labelKey: "nav.jobs" },
         { path: "/provider/invoices", icon: Receipt, labelKey: "nav.invoices" },
         { path: "/provider/profile", icon: HardHat, labelKey: "nav.profile" },
-        { path: "/provider/messages", icon: MessageSquare, labelKey: "nav.messages" },
+        { path: "/provider/inbox", icon: MessageSquare, labelKey: "nav.inbox" },
       ]}
     />
   );

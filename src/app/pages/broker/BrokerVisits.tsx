@@ -4,7 +4,7 @@ import { useI18n } from "@/app/i18n/I18nProvider";
 import { useStore } from "@/app/store/AppStore";
 import { Page, PageHeader, Card, Badge, Button, Modal, Field, Select, Input, Avatar, EmptyState } from "@/app/components/common/ui";
 
-export function AgentVisits() {
+export function BrokerVisits() {
   const { t, locale, date, tv } = useI18n();
   const { db, currentUser, getProperty, getUser, createVisit } = useStore();
   const [open, setOpen] = useState(false);

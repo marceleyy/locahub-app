@@ -6,7 +6,7 @@ import { useStore, complianceCheck } from "@/app/store/AppStore";
 import { getMarket } from "@/app/config/markets";
 import { Page, PageHeader, Card, StatCard, Badge, SectionTitle, Button, Alert, Avatar, Progress } from "@/app/components/common/ui";
 
-export function AgentDashboard() {
+export function BrokerDashboard() {
   const { t, locale, money, date, tv } = useI18n();
   const { db, currentUser, getUser, getProperty } = useStore();
 

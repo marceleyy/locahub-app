@@ -9,7 +9,7 @@ const STATUS_TONE: Record<string, string> = {
   available: "green", occupied: "blue", notice_given: "amber", offline: "neutral",
 };
 
-export function AgentPortfolio() {
+export function BrokerPortfolio() {
   const { t, locale, money, date, tv } = useI18n();
   const { db, currentUser, getUser } = useStore();
   const [tab, setTab] = useState("all");

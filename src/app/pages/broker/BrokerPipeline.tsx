@@ -13,7 +13,7 @@ const STAGES = [
   { id: "lost", fr: "Perdu", en: "Lost", tone: "red" },
 ];
 
-export function AgentPipeline() {
+export function BrokerPipeline() {
   const { t, locale, money, tv } = useI18n();
   const { db, currentUser, createProspect, updateProspect } = useStore();
   const [open, setOpen] = useState(false);

@@ -381,23 +381,6 @@ export const seedInventories = [
   { id: "inv-3", propertyId: "p-qc-2", leaseId: "l-2", type: "entry", date: "2025-07-01", status: "signed", rooms: 5, photos: 31, disputes: 1 },
 ];
 
-export const seedMessages = [
-  {
-    id: "c-1", participants: ["u-tenant-2", "u-agent-1"], propertyId: "p-fr-1", subject: { fr: "Fuite cuisine", en: "Kitchen leak" },
-    messages: [
-      { id: "m1", from: "u-tenant-2", at: "2026-08-14T09:12", body: { fr: "Bonjour, il y a une fuite sous l'évier depuis ce matin.", en: "Hello, there has been a leak under the sink since this morning." } },
-      { id: "m2", from: "u-agent-1", at: "2026-08-14T09:41", body: { fr: "Bien reçu, un plombier passe demain entre 9 h et 12 h. Coupez l'arrivée d'eau en attendant.", en: "Noted, a plumber will come tomorrow between 9am and 12pm. Please shut off the water supply meanwhile." } },
-    ],
-  },
-  {
-    id: "c-2", participants: ["u-tenant-3", "u-agent-2"], propertyId: "p-qc-2", subject: { fr: "Reconduction du bail", en: "Lease renewal" },
-    messages: [
-      { id: "m1", from: "u-agent-2", at: "2026-03-20T14:05", body: { fr: "Avis de reconduction envoyé, augmentation proposée de 2,8 %. Vous avez un mois pour répondre.", en: "Renewal notice sent, proposed increase of 2.8%. You have one month to reply." } },
-      { id: "m2", from: "u-tenant-3", at: "2026-03-22T18:30", body: { fr: "Merci, je reviens vers vous cette semaine.", en: "Thanks, I will get back to you this week." } },
-    ],
-  },
-];
-
 export const seedAudit = [
   { id: "au-1", at: "2026-08-16T08:14", actorId: "u-agent-1", action: "view_application", target: "a-3", detail: { fr: "Consultation du dossier de Yanis Cherif", en: "Viewed Yanis Cherif's application" }, ip: "82.64.xx.xx" },
   { id: "au-2", at: "2026-08-15T17:02", actorId: "u-admin-1", action: "create_user", target: "u-tenant-4", detail: { fr: "Création d'un compte locataire", en: "Created a tenant account" }, ip: "82.64.xx.xx" },
